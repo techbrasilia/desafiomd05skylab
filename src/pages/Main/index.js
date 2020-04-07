@@ -56,9 +56,7 @@ export default class Main extends Component {
     try {
       // this.setState({ techs: this.state.techs.filter(t => t !== tech) })
 
-      const consulta = this.state.repositories.filter(
-        (repo) => repo.name === this.state.newRepo
-      );
+      const consulta = repositories.filter((repo) => repo.name === newRepo);
 
       if (consulta.length > 0) {
         throw new Error('Repositório duplicado');
